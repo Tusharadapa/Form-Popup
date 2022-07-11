@@ -4,9 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Thank you!</title>
+    <script
+      src="https://kit.fontawesome.com/dd3e48db52.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/src/thankyou.css" />
   </head>
   <body>
-    <h3>Thanks!</h3>
+    <div class="circle">
+      <div class="middle">
+        <h1 id="heading">Thanks!</h1>
+        <p id="para">
+          You can now login with your credentials and browse through the
+          courses!
+        </p>
+        <button class="button-50" role="button" onclick="homepage()">
+          <i class="fa-solid fa-user-group"></i>&nbsp;&nbsp;&nbsp; Invite your
+          friends to join the courses
+        </button>
+        <script>
+          function homepage() {
+            window.open("http://localhost:3000/", "_blank");
+          }
+        </script>
+      </div>
+    </div>
   </body>
 </html>

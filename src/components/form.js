@@ -150,13 +150,21 @@ const MainForm = () => {
   //   form1.reset();
   // });
 
+  // function thankyou() {
+  //   // window.location.href = "thankyou.html";
+  // }
+
+  const thanks = () => {
+    window.open("thankyou.html", "_blank");
+  };
+
   const set = (value) => {
-    // console.log("Subject", value);
     setDsubject(value);
   };
   const set1 = (value) => {
     setDgrade(value);
   };
+
   // Form
   const [form] = Form.useForm();
 
@@ -190,7 +198,6 @@ const MainForm = () => {
         prefix: "91",
       }}
       scrollToFirstError
-      action="thankyou.html"
     >
       <Form.Item
         name="email"
@@ -334,30 +341,8 @@ const MainForm = () => {
         </Select>
       </Form.Item>
 
-      {/* <Form.Item
-        name="agreement"
-        valuePropName="checked"
-        rules={[
-          {
-            validator: (_, value) =>
-              value
-                ? Promise.resolve()
-                : Promise.reject(new Error("Should accept agreement")),
-          },
-        ]}
-        {...tailFormItemLayout}
-      >
-        <Checkbox
-          onChange={(e) => setAgreement(e.target.value)}
-          value={agreement}
-        >
-          I have read the{" "}
-          <a href="https://ant.design/components/form/">agreement</a>
-        </Checkbox>
-      </Form.Item> */}
-
       <Form.Item {...tailFormItemLayout}>
-        <Button type="primary" htmlType="submit">
+        <Button type="primary" htmlType="submit" onClick={thanks}>
           Submit
         </Button>
       </Form.Item>
